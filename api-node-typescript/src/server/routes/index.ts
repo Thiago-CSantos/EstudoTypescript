@@ -8,7 +8,7 @@ router.get('/', (request, response) => {
 });
 
 router.post('/teste', (request, response) => {
-      console.log(request);
+      console.log(request.body);
       
       return response.status(StatusCodes.CONFLICT).json(request.body);
 });
