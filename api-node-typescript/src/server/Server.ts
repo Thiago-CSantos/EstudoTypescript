@@ -1,10 +1,12 @@
 import express from 'express';
 
+import {router} from './routes/index'
+
 const server = express();
 
-server.get('/', (request, response) => {
-      return response.send("Ola Mundo!");
-});
+server.use(express.json()); // apenas para console
+
+server.use(router);
 
 
 export { server };
